@@ -94,16 +94,16 @@ main.page { padding: 0 var(--pad) 6rem; }
   font-family: var(--display); font-weight: 700;
   font-size: clamp(3rem, 7vw, 6rem); line-height: 0.95; letter-spacing: -0.03em;
 }
-.lead { font-size: 1.25rem; max-width: 44rem; margin: 0 0 3rem; }
+.lead { font-size: 1.25rem; max-width: 60rem; margin: 0 0 3rem; }
 h2.section {
   margin: 4rem 0 1rem;
   font-family: var(--display); font-weight: 700; font-size: 1.875rem; line-height: 1.2;
 }
-.measure { max-width: 64rem; }
+.measure { max-width: 80rem; }
 
 /* Research */
 .project {
-  display: grid; grid-template-columns: 21rem minmax(0, 40rem); gap: 2.5rem;
+  display: grid; grid-template-columns: 24rem minmax(0, 1fr); gap: 2.5rem;
   align-items: start; padding: 2.25rem 0; border-top: 2px solid var(--rule);
 }
 .project figure { margin: 0; }
