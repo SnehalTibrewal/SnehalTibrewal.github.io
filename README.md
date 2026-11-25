@@ -6,15 +6,14 @@ Plain HTML, CSS and a little JavaScript. No build step, no framework.
 
 | File | Page |
 |---|---|
-| `index.html` | Home: name, intro, photo and the orbit animation |
+| `index.html` | Home: name, intro, photo and the orbit drawing |
 | `research.html` | Research: the two main projects with figures, other papers, LVK papers |
 | `cv.html` | CV: timeline, awards, download button (serves `cv.pdf`) |
 | `off-orbit.html` | Off-orbit: life outside research |
 | `contact.html` | Contact: emails with Copy buttons, profile links |
 | `404.html` | Shown for any address that doesn't exist |
 
-Shared files: `style.css` (all styling), `orbit.js` (home page animation),
-`site.js` (Copy buttons), `images/` (photo and figures).
+Shared files: `style.css` (all styling), `site.js` (Copy buttons), `images/` (photo and figures).
 
 ## Common edits
 

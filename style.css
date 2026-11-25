@@ -63,9 +63,12 @@ a:hover { color: var(--hover); }
 }
 .stage {
   position: absolute; top: 0; right: 0; bottom: 0; width: 64%;
-  pointer-events: none;
 }
-.stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.stage .orbit {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  overflow: visible; color: var(--ink); pointer-events: none;
+}
+.stage .star { fill: var(--accent); }
 .portrait {
   position: absolute; left: 50%; top: 50%;
   width: clamp(200px, 21vw, 300px); height: auto; aspect-ratio: 1;
@@ -83,10 +86,6 @@ a:hover { color: var(--hover); }
   font-size: clamp(3.5rem, 9vw, 8rem); line-height: 0.92; letter-spacing: -0.03em;
 }
 .intro p { margin: 0; font-size: 1.25rem; line-height: 1.55; max-width: 30rem; }
-.orbit-note {
-  position: absolute; right: var(--pad); bottom: 2.25rem; z-index: 2;
-  margin: 0; font-size: 0.875rem; max-width: 26rem; text-align: right; opacity: 0.8;
-}
 
 /* ---------- Inner pages ---------- */
 main.page { padding: 0 var(--pad) 6rem; }
@@ -193,10 +192,9 @@ h2.section {
 /* ---------- Tablets and phones ---------- */
 @media (max-width: 860px) {
   .landing { margin-top: 0; min-height: 0; display: flex; flex-direction: column; }
-  .stage { position: relative; width: 100%; height: min(115vw, 560px); order: 0; }
-  .intro { position: relative; left: auto; bottom: auto; padding: 0 var(--pad); order: 1; }
-  .orbit-note { position: relative; right: auto; bottom: auto; text-align: left; padding: 1.5rem var(--pad) 3rem; order: 2; }
-  .portrait { width: 46vw; max-width: 240px; box-shadow: 0 0 0 7px var(--bg), 0 0 0 10px var(--accent); }
+  .stage { position: relative; width: 100%; height: min(84vw, 440px); order: 0; overflow: hidden; }
+  .intro { position: relative; left: auto; bottom: auto; padding: 0 var(--pad) 3rem; order: 1; }
+    .portrait { width: 34vw; max-width: 200px; box-shadow: 0 0 0 7px var(--bg), 0 0 0 10px var(--accent); }
   .project { grid-template-columns: 1fr; gap: 1.25rem; }
   .project figure { max-width: 28rem; }
   .timeline li { grid-template-columns: 1fr; gap: 0.25rem; }

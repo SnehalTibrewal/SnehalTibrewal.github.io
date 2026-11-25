@@ -51,19 +51,27 @@
     </nav>
   </header>
   <main id="main" class="landing">
-    <div class="stage" aria-hidden="true">
-      <canvas id="orbit-canvas"></canvas>
-      <img class="portrait" src="images/snehal.jpg" alt="" width="640" height="800">
+    <div class="stage">
+      <!-- A precessing, shrinking eccentric orbit, drawn around the photo -->
+      <svg class="orbit" viewBox="-460 -450 920 900" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="2">
+          <ellipse cx="-190" cy="0" rx="380" ry="329" opacity="0.12"/>
+          <ellipse cx="-153" cy="0" rx="340" ry="304" opacity="0.18" transform="rotate(42)"/>
+          <ellipse cx="-120" cy="0" rx="300" ry="275" opacity="0.26" transform="rotate(84)"/>
+          <ellipse cx="-89" cy="0" rx="255" ry="239" opacity="0.36" transform="rotate(128)"/>
+          <ellipse cx="-63" cy="0" rx="210" ry="200" opacity="0.5" transform="rotate(172)"/>
+        </g>
+        <circle class="star" cx="140" cy="-150" r="13"/>
+      </svg>
+      <img class="portrait" src="images/snehal.jpg" alt="Snehal Tibrewal" width="640" height="800">
     </div>
     <div class="intro">
       <h1>Snehal<br>Tibrewal</h1>
       <p>I’m a physics PhD student at the University of Texas at Austin, working with Prof. Deirdre Shoemaker. I’m interested in decoding information about orbital dynamics from gravitational waves emitted by the collision of compact objects like black holes or neutron stars.</p>
     </div>
-    <p class="orbit-note">The orbit is an eccentric inspiral in general relativity: it precesses every lap and shrinks as it radiates gravitational waves, until merger. Effects exaggerated.</p>
   </main>
   <footer class="foot">
     <p>Snehal Tibrewal, The University of Texas at Austin. Hosted on GitHub Pages, no trackers.</p>
   </footer>
-  <script src="orbit.js" defer></script>
 </body>
 </html>
